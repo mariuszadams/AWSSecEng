@@ -1,0 +1,16 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "DenyPutObjectBackupBucket",
+        "Effect": "Deny",
+        "Principal": {
+          "AWS": "INSERT_COMMAND_HOST_IAM_ROLE_ARN, e.g., arn:aws:iam::413095630793:role/CommandHostIamRole"
+
+        },
+        "Action": "s3:PutObject",
+        "Resource": "arn:aws:s3:::INSERT_BACKUP_BUCKET_NAME/*, e.g., arn:aws:s3:::backup-bucket-us-west-2-638301724/*"
+      }
+    ]
+  }
+  
